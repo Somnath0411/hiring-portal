@@ -1,0 +1,6 @@
+/* The dashboard uses the shared .page, .tabs and .grid-cards styles from index.css and the
+   component folders. Page-specific rules go here when needed. */
+
+#panel-questionnaires[hidden] {
+  display: none;
+}

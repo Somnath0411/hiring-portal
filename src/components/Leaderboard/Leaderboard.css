@@ -1,0 +1,11 @@
+.leaderboard__controls {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.leaderboard__filter {
+  width: min(100%, 260px);
+}

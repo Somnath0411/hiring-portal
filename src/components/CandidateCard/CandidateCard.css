@@ -1,0 +1,85 @@
+.candidate-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+  padding: var(--space-5);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.candidate-card:hover {
+  border-color: var(--brand);
+  transform: translateY(-2px);
+}
+
+.candidate-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.candidate-card__rank {
+  min-width: 2.5rem;
+  padding: 2px var(--space-3);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-align: center;
+}
+
+.candidate-card__rank.is-first {
+  background: var(--gold-soft);
+  border-color: var(--gold);
+}
+
+.candidate-card__identity {
+  display: flex;
+  flex-direction: column;
+}
+
+.candidate-card__name {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.candidate-card__role {
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+
+.candidate-card__total {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.candidate-card__total-value {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+
+.candidate-card__total-max {
+  color: var(--ink-faint);
+  font-size: var(--text-sm);
+}
+
+.candidate-card__bars {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}

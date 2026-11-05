@@ -1,0 +1,62 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--space-6) var(--space-4);
+  overflow-y: auto;
+  background: rgba(14, 26, 43, 0.58);
+  animation: modal-fade 0.18s ease-out;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  margin-block: auto;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-pop);
+  animation: modal-rise 0.22s ease-out;
+}
+
+.modal:focus {
+  outline: none;
+}
+
+.modal--md {
+  max-width: 720px;
+}
+
+.modal--sm {
+  max-width: 480px;
+}
+
+.modal__close {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 40px;
+  min-height: 40px;
+  padding: 0;
+}
+
+@keyframes modal-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes modal-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+@media (max-width: 520px) {
+  .modal-backdrop {
+    padding: var(--space-3);
+  }
+}

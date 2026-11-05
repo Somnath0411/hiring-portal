@@ -1,0 +1,40 @@
+.score-bar__top {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-1);
+  font-size: var(--text-sm);
+}
+
+.score-bar__label {
+  color: var(--ink-soft);
+}
+
+.score-bar__value {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.score-bar__track {
+  height: 6px;
+  overflow: hidden;
+  background: var(--paper);
+  border-radius: 999px;
+}
+
+.score-bar__fill {
+  width: var(--value);
+  height: 100%;
+  background: var(--brand);
+  border-radius: 999px;
+}
+
+.score-bar__fill.is-animated {
+  animation: score-fill 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) var(--delay) backwards;
+}
+
+@keyframes score-fill {
+  from {
+    width: 0;
+  }
+}
